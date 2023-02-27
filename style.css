@@ -1,6 +1,18 @@
 
 :root {
-  --clr-white: white;
+  /* COLORS Primary */
+  --clr-marinemblue: hsl(213, 96%, 18%);
+  --clr-purplish-blue: hsl(243, 100%, 62%);
+  --clr-pastel-blue: hsl(228, 100%, 84%);
+  --clr-light-blue: hsl(206, 94%, 87%);
+  --clr-strawberry-red: hsl(354, 84%, 57%);
+
+  /* COLORS Neutral */
+  --clr-cool-gray: hsl(231, 11%, 63%);
+  --clr-light-gray: hsl(229, 24%, 87%);
+  --clr-magnolia: hsl(217, 100%, 97%);
+  --clr-alabaster: hsl(231, 100%, 99%);
+  --clr-white: hsl(0, 0%, 100%);
 }
 
 * {
@@ -15,12 +27,23 @@ body {
   min-height: 100svh;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  background-color: var(--clr-magnolia);
+}
+
+main {
+  max-width: 375px; /* Cause Pixel-Perfect Challenge */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white);
 }
 
 .steps {
-  padding: 2rem;
+  background-image: url(./assets/images/bg-sidebar-mobile.svg);
+  padding: 1.6rem;
   display: flex;
+  flex-direction: row;
   gap: 1rem;
 }
 
@@ -40,4 +63,20 @@ section {
 
 .attribution a { 
   color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 850px) {
+  main {
+    max-width: 1080px;
+    flex-direction: row;
+    height: 568px;
+  }
+  .steps {
+    background-image: url(./assets/images/bg-sidebar-desktop.svg);
+    flex-direction: column;
+    width: 274px;
+  }
+  .container {
+    width: 100%;
+  }
 }
