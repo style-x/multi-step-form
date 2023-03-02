@@ -30,15 +30,14 @@ body {
   justify-content: top;
   flex-direction: column;
   background-color: var(--clr-magnolia);
-  background-color: black; /* DELETE THIS */
 }
 
 main {
   display: flex;
   flex-direction: column;
-  background-color: var(--clr-white);
   border-radius: 1rem;
   position: relative;
+  height: 100svh;
 }
 
 .steps {
@@ -102,14 +101,20 @@ h3 {
   margin-bottom: 2rem;
 }
 
-section {
+.card {
+  height: fit-content;
+  padding: 2rem;
   background-color: var(--clr-white);
   border-radius: 1rem;
+}
+
+section {
   transform: translateY(-4.5rem);
-  margin: 0 1rem;
   height: 100%;
-  padding: 1.5rem;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 /* Section 1 */
@@ -134,30 +139,6 @@ input {
   opacity: 0.6;
 }
 
-button {
-  position: absolute;
-  padding: 0.6rem 1rem;
-  bottom: 1rem;
-}
-
-.btn-back {
-  left: 1rem;
-  background-color: transparent;
-  border-radius: 0.4rem;
-  color: var(--clr-white);
-  font-weight: 700;
-  border-color: transparent;
-}
-
-.btn-next {
-  right: 1rem;
-  background-color: var(--clr-marine-blue);
-  border-radius: 0.4rem;
-  color: var(--clr-white);
-  font-weight: 700;
-  border-color: transparent;
-}
-
 /* Section 2 */
 .section-2 {
   display: none;
@@ -176,6 +157,35 @@ button {
 /* Section End */
 .section-end {
   display: none;
+}
+
+.buttons {
+  background-color: var(--clr-white);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  bottom: 0;
+  width: 100%;
+}
+
+.btn-back {
+  left: 1rem;
+  background-color: transparent;
+  border-radius: 0.4rem;
+  color: var(--clr-cool-gray);
+  font-weight: 700;
+  border-color: transparent;
+  padding: 0.6rem 1rem;
+}
+
+.btn-next {
+  right: 1rem;
+  background-color: var(--clr-marine-blue);
+  border-radius: 0.4rem;
+  color: var(--clr-white);
+  font-weight: 700;
+  border-color: transparent;
+  padding: 0.6rem 1rem;
 }
 
 /* FOOTER */
@@ -197,6 +207,7 @@ button {
   }
 
   main {
+    background-color: var(--clr-white);
     max-width: 1080px;
     flex-direction: row;
     height: calc(568px + 2rem);
@@ -204,9 +215,11 @@ button {
   }
 
   section {
+    height: 100%;
     width: 100%;
     transform: translateY(0rem);
-    padding: 1rem 5rem;
+    padding: 0 2rem;
+    margin-right: 0;
   }
 
   h1 {
