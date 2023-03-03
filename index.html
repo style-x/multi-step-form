@@ -59,8 +59,8 @@
         <br>
       </div>
       <div class="buttons">
-        <button class="btn-back"></button>
-        <button class="btn-next">Next Step</button>
+        <button data-step="1" class="btn-back"></button>
+        <button data-step="1" class="btn-next">Next Step</button>
       </div>
     </section>
     <section class="section-2">
@@ -81,6 +81,10 @@
     
       Go Back
       Next Step
+      <div class="buttons">
+        <button data-step-2 class="btn-back">Back</button>
+        <button data-step-3 class="btn-next">Next Step</button>
+      </div>
     </section>
     <section class="section-3">
       Pick add-ons
@@ -128,5 +132,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.frontendmentor.io/profile/style-x">xan</a>.
   </div>
+
+  <script defer src="app.js"></script>
 </body>
 </html>

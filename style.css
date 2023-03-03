@@ -73,7 +73,7 @@ main {
   color: var(--clr-magnolia);
 }
 
-.circle:active {
+div[class^="step-"].active .circle {
   color: var(--clr-marine-blue);
   background-color: var(--clr-magnolia);
 }
