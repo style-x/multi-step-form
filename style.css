@@ -172,6 +172,17 @@ input {
   padding: 0.6rem 1rem;
 }
 
+.radio-buttons {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.radio-buttons input {
+  display: none;
+}
+
 /* FOOTER */
 .attribution { 
   font-size: 11px; text-align: center; 
