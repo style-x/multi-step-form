@@ -11,6 +11,8 @@
 <body>
 
   <main>
+
+
     <div class="steps">
       <div class="step-1 active">
         <div class="circle">1</div>
@@ -68,31 +70,40 @@
       <h3>You have the option of monthly or yearly billing.</h3>
     
       <div class="radio-buttons">
-        <div class="rdo arcade">
-          <input type="radio" name="radio" id="radio-arcade">
-          <h2>Arcade</h2>
-          <p>$9/mo</p>
+        <div class="radio">
+          <div class="rdo arcade">
+            <img src="assets/images/icon-arcade.svg" alt="image arcade">
+            <input type="radio" name="radio" id="radio-arcade">
+            <h2>Arcade</h2>
+            <p>$9/mo</p>
+          </div>
+          <div class="rdo advance">
+            <img src="assets/images/icon-advanced.svg" alt="image advance">
+            <input type="radio" name="radio" id="radio-advance">
+            <h2>Advanced</h2>
+            <p>$12/mo</p>
+          </div>
+          <div class="rdo pro">
+            <img src="assets/images/icon-pro.svg" alt="image pro">
+            <input type="radio" name="radio" id="radio-pro">
+            <h2>Pro</h2>
+            <p>$15/mo</p>
+          </div>
         </div>
-        <div class="rdo advance">
-          <input type="radio" name="radio" id="radio-advance">
-          <h2>Advanced</h2>
-          <p>$12/mo</p>
-        </div>
-        <div class="rdo pro">
-          <input type="radio" name="radio" id="radio-pro">
-          <h2>Pro</h2>
-          <p>$15/mo</p>
-        </div>
-      </div>
 
-      Monthly
-      Yearly
+        <div class="period">
+          Monthly / Yearly
+        </div>
+      
     
+    </div>
       <div class="buttons">
         <button class="btn-back">Go Back</button>
         <button class="btn-next">Next Step</button>
       </div>
     </section>
+
+
     <section class="section-3">
       <h1>Pick add-ons</h1>
       <h3>Add-ons help enhance your gaming experience.</h3>
@@ -114,12 +125,12 @@
         <button class="btn-next">Next Step</button>
       </div>
     </section>
+
+
     <section class="section-4">
       <h1>Finishing up</h1>
       <h3>Double-check everything looks OK before confirming.</h3>
-    
       <!-- Dynamically add subscription and add-on selections here -->
-    
       Total (per month/year)
 
       <div class="buttons">
@@ -127,6 +138,8 @@
         <button class="btn-next">Confirm</button>
       </div>
     </section>
+
+
     <section class="section-5">
       <img src="\assets\images\icon-thank-you.svg" alt="">
       <h1>Thank you!</h1>
@@ -135,7 +148,6 @@
       using our platform. If you ever need support, please feel free 
       to email us at support@loremgaming.com.</h3>
     </section>
-
 
 
   </main>
