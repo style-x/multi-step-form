@@ -36,4 +36,5 @@ function changeStep(s) {
 
 /*
 console.log(activeStep);
+document.querySelector('input[name="genderS"]:checked').value;
 */

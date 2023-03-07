@@ -98,7 +98,6 @@ h3 {
   color: var(--clr-cool-gray);
   font-size: 1.1rem;
   font-weight: 400;
-  margin-bottom: 2rem;
 }
 
 img {
@@ -107,7 +106,7 @@ img {
 
 .card {
   height: fit-content;
-  padding: 2rem;
+  padding: 0 2rem;
   background-color: var(--clr-white);
   border-radius: 1rem;
 }
@@ -185,14 +184,19 @@ label {
 .radio {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+  grid-template-columns: repeat(3, 1fr);;
   gap: 0.6rem;
 }
 
 .rdo {
-  border: 1px solid var(--clr-purplish-blue);
+  position: relative;
+  border: transparent;
   border-radius: 1rem;
-  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .radio-buttons {
@@ -200,11 +204,23 @@ label {
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 1rem;
 }
 
 .radio-buttons input {
-  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  margin: 0;
+  z-index: 2;
+  opacity: 0;
+}
+
+input:checked + .rdo {
+  border: 1px solid var(--clr-purplish-blue);
+  background-color: red;
 }
 
 /* FOOTER */
