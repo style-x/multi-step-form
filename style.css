@@ -35,9 +35,10 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  border-radius: 1rem;
+  justify-content: space-between;
   position: relative;
   height: 100svh;
+  background-color: var(--clr-magnolia);
 }
 
 .steps {
@@ -91,6 +92,7 @@ p {
 
 h1 {
   color: var(--clr-marine-blue);
+  padding-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -101,14 +103,15 @@ h3 {
 }
 
 img {
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .card {
-  height: fit-content;
   padding: 0 2rem;
   background-color: var(--clr-white);
-  border-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 100%;
 }
 
 section {
@@ -190,13 +193,27 @@ label {
 
 .rdo {
   position: relative;
-  border: transparent;
+  border: 1px solid var(--clr-light-gray);
   border-radius: 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  transition: all 300ms ease-in-out;
+}
+
+.section-3 .card {
+  gap: 1rem;
+}
+
+.section-4 .card, .section-5 .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .radio-buttons {
@@ -215,12 +232,95 @@ label {
   cursor: pointer;
   margin: 0;
   z-index: 2;
-  opacity: 0;
+  opacity: 0.1;
 }
 
-input:checked + .rdo {
-  border: 1px solid var(--clr-purplish-blue);
+input[type="radio"]:checked + .rdo {
+  border-color: var(--clr-purplish-blue);
   background-color: red;
+}
+
+/***/
+
+.period {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: var(--clr-marine-blue);
+  font-weight: 700;
+}
+
+.period p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--clr-marine-blue);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.2rem;
+  width: 1.2rem;
+  left: 3px;
+  bottom: 2.5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#period1 {
+  color: var(--clr-marine-blue);
+}
+
+.switch > input[type="radio"]:checked ~ #period2 {
+  color: var(--clr-marine-blue);
+}
+
+.switch > input[type="radio"]:checked ~ #period1 {
+  color: var(--clr-pastel-blue);
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(1.49rem);
+  -ms-transform: translateX(1.49rem);
+  transform: translateX(1.49rem);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 /* FOOTER */
@@ -247,6 +347,7 @@ input:checked + .rdo {
     flex-direction: row;
     height: calc(568px + 2rem);
     padding: 1rem;
+    border-radius: 1rem;
   }
 
   section {
